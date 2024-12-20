@@ -3,7 +3,11 @@ import type { Reader } from "@std/io/iterate-reader";
 import { BufReader } from "@std/io/buf-reader";
 import { Buffer } from "@std/io/buffer";
 import { readAll } from "@std/io/read-all";
-import { escape } from "@es-toolkit/es-toolkit";
+import { escape as escapeHtml } from "@es-toolkit/es-toolkit";
+
+function escape(str: unknown): string {
+  return escapeHtml(String(str));
+}
 
 export interface Params {
   //deno-lint-ignore no-explicit-any
