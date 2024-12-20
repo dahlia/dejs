@@ -1,11 +1,10 @@
-const { Buffer, copy, cwd } = Deno;
-import {
-  assertEquals,
-  assertRejects,
-} from "./vendor/https/deno.land/std/testing/asserts.ts";
-import { readAll } from "./vendor/https/deno.land/std/io/util.ts";
+const { cwd } = Deno;
+import { Buffer } from "@std/io/buffer";
+import { copy } from "@std/io/copy";
+import { assertEquals, assertRejects } from "@std/assert";
+import { readAll } from "@std/io/read-all";
 import * as dejs from "./mod.ts";
-import escape from "./vendor/https/deno.land/x/lodash/escape.js";
+import { escape } from "@es-toolkit/es-toolkit";
 
 const decoder = new TextDecoder("utf-8");
 

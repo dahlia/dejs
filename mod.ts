@@ -1,9 +1,9 @@
 const { open } = Deno;
-type Reader = Deno.Reader;
-import { BufReader } from "./vendor/https/deno.land/std/io/bufio.ts";
-import { Buffer } from "./vendor/https/deno.land/std/io/buffer.ts";
-import { readAll } from "./vendor/https/deno.land/std/io/util.ts";
-import escape from "./vendor/https/deno.land/x/lodash/escape.js";
+import type { Reader } from "@std/io/iterate-reader";
+import { BufReader } from "@std/io/buf-reader";
+import { Buffer } from "@std/io/buffer";
+import { readAll } from "@std/io/read-all";
+import { escape } from "@es-toolkit/es-toolkit";
 
 export interface Params {
   //deno-lint-ignore no-explicit-any
